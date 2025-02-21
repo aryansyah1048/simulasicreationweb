@@ -1,84 +1,111 @@
+// Slide
+let items = document.querySelectorAll(".slider .list .item");
+let next = document.getElementById("next");
+let prev = document.getElementById("prev");
+let thumbnails = document.querySelectorAll(".thumbnail .item");
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function () {
+  itemActive = itemActive + 1;
+  if (itemActive >= countItem) {
+    itemActive = 0;
+  }
+  showSlider();
+};
+//event prev click
+prev.onclick = function () {
+  itemActive = itemActive - 1;
+  if (itemActive < 0) {
+    itemActive = countItem - 1;
+  }
+  showSlider();
+};
+// auto run slider
+let refreshInterval = setInterval(() => {
+  next.click();
+}, 5000);
+function showSlider() {
+  // remove item active old
+  let itemActiveOld = document.querySelector(".slider .list .item.active");
+  let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
+  itemActiveOld.classList.remove("active");
+  thumbnailActiveOld.classList.remove("active");
+
+  // active new item
+  items[itemActive].classList.add("active");
+  thumbnails[itemActive].classList.add("active");
+  setPositionThumbnail();
+
+  // clear auto time run slider
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    next.click();
+  }, 5000);
+}
+function setPositionThumbnail() {
+  let thumbnailActive = document.querySelector(".thumbnail .item.active");
+  let rect = thumbnailActive.getBoundingClientRect();
+  if (rect.left < 0 || rect.right > window.innerWidth) {
+    thumbnailActive.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+  }
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", () => {
+    itemActive = index;
+    showSlider();
+  });
+});
+
+//menu
+var tombolMenu = $(".tombol-menu");
+var menu = $("nav .menu ul");
+
+function klikMenu() {
+  tombolMenu.click(function () {
+    menu.toggle();
+  });
+  menu.click(function () {
+    menu.toggle();
+  });
+}
+
 $(document).ready(function () {
-  $(window).scroll(function () {
-    // sticky navbar on scroll script
-    if (this.scrollY > 20) {
-      $(".navbar").addClass("sticky");
+  var width = $(window).width();
+  if (width < 990) {
+    klikMenu();
+  }
+});
+
+//check lebar
+$(window).resize(function () {
+  var width = $(window).width();
+  if (width > 989) {
+    menu.css("display", "block");
+    //display:block
+  } else {
+    menu.css("display", "none");
+  }
+  klikMenu();
+});
+
+//efek scroll
+$(document).ready(function () {
+  var scroll_pos = 0;
+  $(document).scroll(function () {
+    scroll_pos = $(this).scrollTop();
+    if (scroll_pos > 0) {
+      $("nav").addClass("putih");
+      $("nav img.hitam").show();
+      $("nav img.putih").hide();
     } else {
-      $(".navbar").removeClass("sticky");
+      $("nav").removeClass("putih");
+      $("nav img.hitam").hide();
+      $("nav img.putih").show();
     }
-
-    // scroll-up button show/hide script
-    if (this.scrollY > 500) {
-      $(".scroll-up-btn").addClass("show");
-    } else {
-      $(".scroll-up-btn").removeClass("show");
-    }
-  });
-
-  // slide-up script
-  $(".scroll-up-btn").click(function () {
-    $("html").animate({ scrollTop: 0 });
-    // removing smooth scroll on slide-up button click
-    $("html").css("scrollBehavior", "auto");
-  });
-
-  $(".navbar .menu li a").click(function () {
-    // applying again smooth scroll on menu items click
-    $("html").css("scrollBehavior", "smooth");
-  });
-
-  // toggle menu/navbar script
-  $(".menu-btn").click(function () {
-    $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
-  });
-
-  // typing text animation script
-  var typed = new Typed(".typing", {
-    strings: [
-      "Web Developer",
-      "Fuullstack Developer",
-      "Web Designer",
-      "Santri",
-    ],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
-
-  var typed = new Typed(".typing-2", {
-    strings: [
-      "Web Developer",
-      "Fullstack Developer",
-      "Web Designer",
-      "Santri",
-    ],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true,
-  });
-
-  
-  // owl carousel script
-  $(".carousel").owlCarousel({
-    margin: 20,
-    loop: true,
-    autoplay: true,
-    autoplayTimeOut: 2000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-      },
-      600: {
-        items: 2,
-        nav: false,
-      },
-      1000: {
-        items: 3,
-        nav: false,
-      },
-    },
   });
 });
