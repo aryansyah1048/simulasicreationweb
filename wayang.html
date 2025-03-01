@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labuan</title>
+
+    <!-- AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <style>
+      html {
+        background-color: #000080;
+      }
+      body {
+        font-family: "poppy", sans-serif;
+        background-color: #000080;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background-color: #000080;
+      }
+      .container-tentang {
+        padding-bottom: 180px;
+      }
+      .container-tentang h1 {
+        font-size: 80px;
+        padding-top: 100px;
+      }
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        margin-top: 50px;
+      }
+      .image {
+        flex: 1;
+        text-align: center;
+      }
+      .image img {
+        width: 350px;
+        border-radius: 40px;
+        margin: 5%;
+      }
+      .text {
+        flex: 2;
+        text-align: left;
+        font-size: 1.2em;
+        line-height: 1.5;
+      }
+      .tentang {
+        line-height: 1.5;
+        font-family: "poppy", sans-serif;
+        font-size: 1.2em;
+      }
+
+      .ul {
+        width: 50%;
+        margin: 0 auto;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #000080;
+        margin: 0;
+      }
+      .hex-grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        justify-content: center;
+      }
+      .hex {
+        position: relative;
+        width: 120px;
+        height: 138px;
+        margin: 5px;
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
+      }
+      .hex:hover {
+        filter: grayscale(0%);
+        transform: translateY(-15px) scale(1.1);
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-tentang">
+        <h1>Labuan Merapi & Parangkusumo</h1>
+        <b class="tentang">
+          <b style="color: aqua;">Labuan Merapi</b> adalah upacara adat di lereng Gunung Merapi untuk
+          menghormati Eyang Merapi, penjaga gunung, serta memohon
+          perlindungan. Ritual ini dilakukan dengan melabuh benda pusaka dan
+          sesajen, dipimpin oleh juru kunci.
+          <br>
+          <b  style="color: aqua;">Labuhan Parangkusumo</b>diadakan
+          di Pantai Parangkusumo sebagai penghormatan kepada **Ratu Kidul**,
+          penguasa Laut Selatan. Benda pusaka dari Keraton Yogyakarta dilarung
+          ke laut dalam prosesi sakral. Kedua ritual ini mencerminkan
+          kepercayaan masyarakat Yogyakarta terhadap keseimbangan alam dan
+          hubungan spiritual dengan leluhur, serta tetap dilestarikan hingga
+          kini sebagai bagian dari warisan budaya.
+        </p>
+      </div>
+      <div class="section">
+        <div class="image" data-aos="fade-right">
+          <img src="image/proses merapi.webp" alt="Tugu Jogja" />
+        </div>
+        <div class="text">
+          <p>
+            Labuhan Merapi adalah upacara adat yang dilakukan di lereng Gunung Merapi untuk menghormati Eyang Merapi, penjaga gunung. Prosesi diawali dengan pengambilan benda pusaka dari Keraton Yogyakarta, lalu dibawa ke lokasi sakral di gunung oleh juru kunci dan abdi dalem. Sesajen seperti kain mori, bunga, makanan, dan dupa dilarung sebagai bentuk penghormatan serta permohonan keselamatan bagi masyarakat sekitar. Ritual ini juga diiringi doa-doa agar Merapi tetap memberikan berkah, bukan bencana. Tradisi ini mencerminkan hubungan harmonis antara manusia, alam, dan spiritualitas Jawa.
+          </p>
+        </div>
+      </div>
+
+      <div class="section" style="flex-direction: row-reverse">
+        <div class="image" data-aos="fade-left">
+          <img
+            src="image/proses parangkusumo.webp"
+            alt="Wayang"
+          />
+        </div>
+        <div class="text">
+          <p>
+            Labuhan Parangkusumo adalah upacara adat di Pantai Parangkusumo sebagai bentuk penghormatan kepada Ratu Kidul, penguasa Laut Selatan. Ritual ini diawali dengan kirab benda pusaka dari Keraton Yogyakarta, lalu dibawa ke pantai oleh para abdi dalem dan juru kunci. Sesajen berupa bunga, makanan, dan kain batik dilarung ke laut sebagai simbol penghormatan dan permohonan berkah. Upacara ini mencerminkan hubungan spiritual antara Sultan Yogyakarta dan Ratu Kidul, serta kepercayaan masyarakat Jawa terhadap keseimbangan alam dan kehidupan.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="image" data-aos="fade-right">
+          <img
+            src="image/dale 1.webp">
+        </div>
+        <div class="text">
+          <p>
+            Labuhan Merapi dan Labuhan Parangkusumo adalah tradisi sakral Kesultanan Yogyakarta yang mencerminkan hubungan spiritual dengan alam dan leluhur. Labuhan Merapi menghormati Eyang Merapi, sementara Labuhan Parangkusumo ditujukan kepada Ratu Kidul. Kedua ritual ini dilakukan dengan melarung benda pusaka dan sesajen sebagai bentuk penghormatan serta permohonan keselamatan. Tradisi ini terus dilestarikan sebagai warisan budaya yang menunjukkan keyakinan masyarakat Jawa terhadap keseimbangan alam, spiritualitas, serta hubungan erat antara manusia dan kekuatan gaib.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="hex-grid">
+        <div data-aos="fade-down-right"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(1\).jpeg')"
+        ></div>
+        <div data-aos="fade-down-right"
+          class="hex"
+          style="background-image: url('image/selengjkapnya.jpeg')"
+        ></div>
+        <div data-aos="fade-down-left"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(2\).jpeg')"
+        ></div>
+        <div  data-aos="fade-down-left"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(3\).jpeg')"
+        ></div>
+        <div data-aos="fade-right"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(4\).jpeg')"
+        ></div>
+        <div data-aos="fade-right"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(5\).jpeg')"
+        ></div>
+        <div data-aos="fade-left"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(6\).jpeg')"
+        ></div>
+        <div data-aos="fade-left"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(7\).jpeg')"
+        ></div>
+        <div data-aos="fade-up-right"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(8\).jpeg')"
+        ></div>
+        <div data-aos="fade-up-left"
+          class="hex"
+          style="background-image: url('image/selengkapnya\ 1\ \(9\).jpeg')"
+        ></div>
+      </div>
+    </section>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Yogyapedia</title>
+
+    <link rel="icon" href="image/logojogja.png" type="image/x-icon" />
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
       defer
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -41,96 +39,84 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav>
-      <div class="layar-dalam">
-        <div class="logo">
-          <a href=""
-            ><img src="image/logo-removebg-preview.png" class="putih"
-          /></a>
-          <a href=""
-            ><img src="image/logo-removebg-preview.png" class="hitam"
-          /></a>
-        </div>
-        <div class="menu">
-          <a href="#" class="tombol-menu">
-            <span class="garis"></span>
-            <span class="garis"></span>
-            <span class="garis"></span>
-          </a>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutus">About Us</a></li>
-            <li><a href="#support">Support</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white shadow-md z-50 h-20 py-3"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#">
+          <img src="image/logojogja.png" class="-mt-2 w-20 h-20 ml-16" />
+        </a>
+        <ul class="hidden md:flex space-x-6 mr-12 -mt-1">
+          <li><a href="#home" class="text-black">Home</a></li>
+          <li><a href="#about" class="text-black">About</a></li>
+          <li><a href="#Budaya" class="text-black">Budaya</a></li>
+          <li><a href="#wisata" class="text-black">Wisata</a></li>
+          <li><a href="#ourteam" class="text-black">Our Team</a></li>
+          <li><a href="#comentar" class="text-black">Review</a></li>
+        </ul>
       </div>
     </nav>
+
     <!-- Slider -->
-    <section>
+    <section id="home">
       <div class="slider">
         <!-- list Items -->
         <div class="list">
           <div class="item active">
             <img src="image/slide2tuguh.jpg" />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 01</h2>
+              <p>Icon yogyakarta</p>
+              <h2 style="color: white">Tugu</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Kota budaya dengan jejak kerajaan Mataram! Dari Keraton hingga
+                perjuangan kemerdekaan, setiap sudutnya menyimpan kisah luar
+                biasa.
               </p>
             </div>
           </div>
           <div class="item">
             <img src="image/slide1benteng.jpg" />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 02</h2>
+              <p>Sejarah</p>
+              <h2 style="color: white">Vredeburg</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Benteng peninggalan Belanda dengan museum bersejarah, di sini
+                kamu bisa napak tilas perjuangan bangsa sambil menikmati
+                arsitektur klasiknya!
               </p>
             </div>
           </div>
           <div class="item">
             <img src="image/slide3malioboro.jpg" />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 03</h2>
+              <p>Pusat Belanja</p>
+              <h2 style="color: white">Malioboro</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Jalanan ikonik penuh budaya, kuliner, dan belanja murah! Nikmati
+                suasana malam sambil naik andong atau mencicipi gudeg khas.
               </p>
             </div>
           </div>
           <div class="item">
             <img src="image/slide4candi.jpg" />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 04</h2>
+              <p>Budaya</p>
+              <h2 style="color: white">Prambanan</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Candi Hindu terbesar di Indonesia! Megahnya arsitektur dan kisah
+                Roro Jonggrang bikin tempat ini wajib masuk bucket list-mu!
               </p>
             </div>
           </div>
           <div class="item">
             <img src="image/slide5merapi.jpg" />
             <div class="content">
-              <p>design</p>
-              <h2>Slider 05</h2>
+              <p>Alam</p>
+              <h2 style="color: white">Merapi</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
-                neque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ipsum, ex.
+                Gunung aktif megah dengan pemandangan luar biasa! Rasakan
+                sensasi jeep lava tour dan jelajahi sisa-sisa erupsi yang epik.
               </p>
             </div>
           </div>
@@ -142,25 +128,25 @@
         </div>
         <!-- thumbnail -->
         <div class="thumbnail">
-          <div class="item active" data-aos="flip-left" data-aos-delay="1500">
+          <div class="item active" data-aos="flip-left">
             <img src="image/slide2tuguh.jpg" />
-            <div class="content">Name Slider</div>
+            <div class="content">Tugu Yogyakarta</div>
           </div>
-          <div class="item" data-aos="flip-left" data-aos-delay="1600">
+          <div class="item" data-aos="flip-left">
             <img src="image/slide1benteng.jpg" />
-            <div class="content">Name Slider</div>
+            <div class="content">Vredeburg</div>
           </div>
           <div class="item" data-aos="flip-left">
             <img src="image/slide3malioboro.jpg" />
-            <div class="content">Name Slider</div>
+            <div class="content">Malioboro</div>
           </div>
           <div class="item" data-aos="flip-left">
             <img src="image/slide4candi.jpg" />
-            <div class="content">Name Slider</div>
+            <div class="content">Candi Prambanan</div>
           </div>
           <div class="item" data-aos="flip-left">
             <img src="image/slide5merapi.jpg" />
-            <div class="content">Name Slider</div>
+            <div class="content">Gunung Merapi</div>
           </div>
         </div>
       </div>
@@ -171,14 +157,22 @@
       <div class="layar-dalam">
         <h3>About</h3>
         <p class="ringkasan">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-          cupiditate.
+          Jogja itu lebih dari sekadar kota—penuh cerita, rindu, dan
+          petualangan! Dari Malioboro hingga Merapi, setiap sudutnya bikin jatuh
+          cinta. Udah siap eksplor Jogja?
         </p>
         <div class="konten-isi">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, iure
-            vero soluta exercitationem deleniti possimus cupiditate autem
-            facilis magni illum?
+            Jogja itu bukan sekadar kota, tapi juga cerita. Suasana klasik
+            bercampur modern bikin siapa pun betah berlama-lama. Dari Malioboro
+            yang selalu hidup, angkringan dengan kopi jos khasnya, sampai Candi
+            Prambanan yang megah, semua punya pesona sendiri. Jalan-jalan naik
+            delman, nyicip gudeg legit, atau sekadar duduk di Tugu Jogja sambil
+            nunggu senja—semuanya terasa istimewa. Apalagi kalau mampir ke
+            Pantai Parangtritis buat lihat sunset atau ke Merapi buat
+            petualangan seru. Di Jogja, setiap sudut punya kenangan, setiap
+            langkah berasa pulang. Nggak heran kalau banyak yang bilang, Jogja
+            itu terbuat dari rindu, pulang, dan angkringan.
           </p>
         </div>
         <div class="tombol-container">
@@ -194,51 +188,56 @@
       <div class="layar-dalam">
         <h3>Budaya Yogyakarta</h3>
         <p class="ringkasan">
-          Yogyakarta memiliki budaya khas yang terkenal, seperti kuliner dan
-          tradisi adat.
+          Sekaten dan Labuhan Merapi adalah dua tradisi khas Yogyakarta yang
+          sarat makna. Sekaten dirayakan setiap Maulid Nabi dengan gamelan,
+          pasar malam, dan prosesi Grebeg Maulud. Sementara itu, Labuhan Merapi
+          adalah ritual persembahan di lereng Merapi sebagai ungkapan syukur dan
+          doa keselamatan, mencerminkan harmoni budaya dan spiritual masyarakat
+          Jogja.
         </p>
       </div>
 
       <div class="container-budaya">
         <div class="container-wayang" data-aos="fade-right">
-          <img src="image/wayang.jpeg" class="kiri" alt="wayang" />
+          <img src="image/sekaten.webp" class="kiri" alt="wayang" />
           <div>
             <h2>
-              <b>Wayang</b>
+              <b>Sekaten</b>
             </h2>
             <p class="paragraf">
-              Wayang adalah seni pertunjukan tradisional khas Yogyakarta yang
-              menggabungkan cerita epik, musik gamelan, dan seni ukir wayang
-              kulit. Wayang tidak hanya hiburan, tetapi juga sarana pendidikan
-              moral dan spiritual. Dalam setiap lakonnya, wayang menggambarkan
-              nilai-nilai kehidupan, kepahlawanan, serta ajaran filosofi Jawa
-              yang kaya, menjadikannya warisan budaya tak ternilai.
+              Sekaten adalah tradisi tahunan yang diselenggarakan untuk
+              memperingati Maulid Nabi Muhammad SAW. Acara ini berlangsung
+              selama seminggu di Alun-Alun Utara Keraton Yogyakarta dan diakhiri
+              dengan Grebeg Maulud, di mana gunungan berisi hasil bumi dibagikan
+              kepada masyarakat sebagai simbol keberkahan.
             </p>
             <button
               class="btn-detail"
-              onclick="bukaTabBaruwayang('wayang.html')"
+              onclick="bukaTabBaruwayang('batik.html')"
             >
-              Detail
+              Monggo
             </button>
           </div>
         </div>
 
         <div class="container-batik" data-aos="fade-left">
-          <img src="image/batikparang.jpeg" class="kanan" alt="batik" />
+          <img src="image/labuanmerapi.webp" class="kanan" alt="batik" />
           <div>
             <h2>
-              <b>Batik</b>
+              <b> Labuan Merapi & Labuhan Parangkusumo</b>
             </h2>
             <p class="paragraf">
-              Batik itu lebih dari sekadar kain ini adalah warisan budaya
-              Yogyakarta yang penuh makna. Setiap motifnya punya cerita, dari
-              filosofi kehidupan sampai sejarah kerajaan. Proses pembuatannya
-              juga nggak instan, butuh kesabaran dan keahlian tinggi. Dari batik
-              tulis yang klasik sampai batik cap yang lebih modern, semuanya
-              tetap mencerminkan keindahan dan kebanggaan budaya lokal.
+              Tradisi ini dilakukan oleh Keraton Yogyakarta sebagai bentuk
+              penghormatan kepada penguasa gaib Gunung Merapi dan Pantai
+              Selatan. Ritual ini melibatkan persembahan sesaji yang dihanyutkan
+              ke laut atau diletakkan di lereng Merapi, sebagai doa keselamatan
+              bagi masyarakat Jogja.
             </p>
-            <button class="btn-detail" onclick="bukaTabBarubatik('batik.html')">
-              Detail
+            <button
+              class="btn-detail"
+              onclick="bukaTabBarubatik('wayang.html')"
+            >
+              Monggo
             </button>
           </div>
         </div>
@@ -249,35 +248,46 @@
       <div class="layar-dalam">
         <h3>Wisata & Destinasi</h3>
         <p class="ringkasan">
-          Jogja itu kota penuh pesona! Dari Malioboro, candi megah, pantai
-          eksotis, kuliner gudeg, hingga budaya khas—semuanya bikin betah dan
-          selalu ingin balik lagi! penasaran? klik visit untuk info lebih
-          lanjut.
+          Yogyakarta dikenal sebagai kota dengan sejuta pesona, mulai dari
+          wisata alam, budaya, hingga kuliner. Beberapa tempat wisata populer di
+          Yogyakarta bisa menjadi pilihan untuk pengalaman tak terlupakan
         </p>
       </div>
-      <div class="container">
-        <div class="card" data-link="https://example.com/tour">
+      <div class="grid">
+        <div
+          class="card"
+          data-link="https://borobudur.injourneydestination.id/"
+          data-aos="fade-up-left"
+        >
           <div class="wrapper">
             <img src="image/wisata budaya.jpeg" alt="Tour" />
           </div>
           <button>visit</button>
         </div>
 
-        <div class="card" data-link="https://example.com/tiket">
+        <div class="card" data-link="https://tngmerapi.id/" data-aos="fade-up">
           <div class="wrapper">
             <img src="image/wisatamerapi.jpeg" alt="Tiket Pesawat" />
           </div>
           <button>visit</button>
         </div>
 
-        <div class="card" data-link="https://example.com/paket">
+        <div
+          class="card"
+          data-link="https://www.malmalioboro.co.id/"
+          data-aos="fade-up"
+        >
           <div class="wrapper">
             <img src="image/wisata belanja.jpeg" alt="Paket Wisata" />
           </div>
           <button>visit</button>
         </div>
 
-        <div class="card" data-link="https://example.com/cruise">
+        <div
+          class="card"
+          data-link="https://raminten.com/"
+          data-aos="fade-up-right"
+        >
           <div class="wrapper">
             <img src="image/wisata kuliner.jpeg" alt="Cruise" />
           </div>
@@ -285,479 +295,514 @@
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4 text-center">Photo Gallery</h1>
-        <div class="grid grid-cols-4 gap-1">
-          <div class="col-span-2 row-span-2">
-            <img
-              alt="A cup of coffee on a beige background"
-              class="w-full h-full object-cover rounded-full"
-              height="200"
-              src="image/wayang.jpeg"
-              width="200"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A green plant in a white pot"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/wayang.jpeg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A keyboard and a cup of coffee on a white background"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/slide5merapi.jpg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A white lamp hanging against a teal background"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/wisata budaya.jpeg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A pattern of leaves on a light grey background"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/slide1benteng.jpg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-1 row-span-2">
-            <img
-              alt="A collection of flowers on a white background"
-              class="w-full h-full object-cover rounded-lg"
-              height="200"
-              src="image/rumahadat.jpeg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-2 row-span-2">
-            <img
-              alt="A vase with eucalyptus branches on a white background"
-              class="w-full h-full object-cover rounded-full"
-              height="200"
-              src="image/gudeg.jpg"
-              width="200"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A white cup on a white background"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/bakpia.jpeg"
-              width="100"
-            />
-          </div>
-          <div class="col-span-1 row-span-1">
-            <img
-              alt="A green leaf on a white background"
-              class="w-full h-full object-cover rounded-lg"
-              height="100"
-              src="image/bakpia.jpeg"
-              width="100"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Our Team -->
-
-    <section id="ourteam" class="p-6">
-      <div class="layar-dalam">
+    <section id="ourteam" class="team-section">
+      <div class="section-container">
         <h3>Our Team</h3>
         <p class="ringkasan">
           Kami adalah tim kreatif yang fokus bikin website interaktif dan
-          responsif. Tanpa backend atau database, kami mengutamakan animasi,
-          efek keren, dan pengalaman pengguna yang smooth. Intinya, bikin
-          tampilan web yang nggak cuma menarik, tapi juga asik buat dipakai! 🚀
+          responsif...
         </p>
       </div>
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-white p-6 rounded-lg shadow-md" x-data="{ open: false }">
-          <div class="flex flex-col items-center">
+
+      <div class="team-members">
+        <!-- Member 1 -->
+        <article class="member-card">
+          <div class="member-profile">
             <img
-              alt="Portrait of OluTimehin Adegbeye"
-              class="rounded-full mb-4"
-              height="100"
               src="image/profiliyan.jpeg"
-              width="100"
+              alt="Aryansyah Mahendra"
+              class="member-photo"
             />
-            <h2 class="text-xl font-bold text-gray-800 mb-2">
-              Aryansyah Mahendra
-            </h2>
-            <h3 class="text-md font-semibold text-gray-600 mb-4">
-              Interaction Developer
-            </h3>
-            <p class="text-gray-700 mb-4 text-center">
-              Aku yang bikin website jadi lebih hidup dengan animasi keren. Biar
-              tampilan nggak cuma statis, tapi interaktif dan menarik!
+            <h3 class="member-name">Aryansyah Mahendra</h3>
+            <p class="member-role">Interaction Developer</p>
+            <p class="member-bio">
+              Aku yang bikin website jadi lebih hidup dengan animasi keren...
             </p>
-            <div class="flex space-x-4 mt-4">
-              <a href="#" target="_blank"
-                ><img
-                  src="image/github-color-svgrepo-com.svg"
-                  alt="GitHub"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/whatsapp-symbol-logo-svgrepo-com.svg"
-                  alt="WhatsApp"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/instagram-2016-logo-svgrepo-com.svg"
-                  alt="Instagram"
-                  class="w-6 h-6"
-              /></a>
-            </div>
-            <button
-              class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-              @click="open = true"
-            >
-              My Role
-            </button>
           </div>
-          <div
-            x-cloak
-            x-show="open"
-            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-            @click.away="setTimeout(() => open = false, 80000)"
-          >
-            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">
-                Aryansyah Mahendra
-              </h2>
-              <p class="text-gray-700">
-                Halo! Aku Aryansyah, di tim ini Saya bagian bikin websitenya
-                lebih hidup! Mulai dari animasi yang smooth, transisi yang kece,
-                sampai interaksi yang asik buat pengguna.
-              </p>
-              <button
-                class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-                @click="open = false"
-              >
-                Close
-              </button>
-            </div>
+          <div class="member-social">
+            <a href="#" class="social-link">
+              <img
+                src="image/github-color-svgrepo-com.svg"
+                alt="GitHub"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/gmail-svgrepo-com.svg"
+                alt="Email"
+                class="social-icon"
+              />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/instagram-2016-logo-svgrepo-com.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-1">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 1 -->
+        <div id="modal-1" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Aryansyah Mahendra</h3>
+            <p class="modal-text">
+              Halo! Aku Aryansyah, seorang Interaction Developer...
+            </p>
+            <button class="cta-button close-modal">Close</button>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-white p-6 rounded-lg shadow-md" x-data="{ open: false }">
-          <div class="flex flex-col items-center">
+        <!-- Member 2 -->
+        <article class="member-card">
+          <div class="member-profile">
             <img
-              alt="Portrait of Eric Holthaus"
-              class="rounded-full mb-4"
-              height="100"
               src="image/profilbobon_round_fixed.png"
-              width="100"
+              alt="Santoso Wibowo"
+              class="member-photo"
             />
-            <h2 class="text-xl font-bold text-gray-800 mb-2">Santoso Wibowo</h2>
-            <h3 class="text-md font-semibold text-gray-600 mb-4">
-              UI/UX Designer
-            </h3>
-            <p class="text-gray-700 mb-4 text-center">
-              Aku yang mikirin tampilan dan pengalaman pengguna. Biar website
-              nggak cuma bagus, tapi juga nyaman buat dipakai sehari-hari!
+            <h3 class="member-name">Santoso Wibowo</h3>
+            <p class="member-role">UI/UX Designer</p>
+            <p class="member-bio">
+              Aku yang mikirin tampilan dan pengalaman pengguna...
             </p>
-            <div class="flex space-x-4 mt-4">
-              <a href="#" target="_blank"
-                ><img
-                  src="image/github-color-svgrepo-com.svg"
-                  alt="GitHub"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/whatsapp-symbol-logo-svgrepo-com.svg"
-                  alt="WhatsApp"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/instagram-2016-logo-svgrepo-com.svg"
-                  alt="Instagram"
-                  class="w-6 h-6"
-              /></a>
-            </div>
-            <button
-              class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-              @click="open = true"
-            >
-              My Role
-            </button>
           </div>
-          <div
-            x-cloak
-            x-show="open"
-            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-            @click.away="setTimeout(() => open = false, 80000)"
-          >
-            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">
-                Santoso Wibowo
-              </h2>
-              <p class="text-gray-700">
-                Aku bertanggung jawab atas desain dan pengalaman pengguna,
-                memastikan tampilan website selalu menarik dan user-friendly.
-              </p>
-              <button
-                class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-                @click="open = false"
-              >
-                Close
-              </button>
-            </div>
+          <div class="member-social">
+            <a href="#" class="social-link">
+              <img src="image/github.svg" alt="GitHub" class="social-icon" />
+            </a>
+            <a href="#" class="social-link">
+              <img src="image/email.svg" alt="Email" class="social-icon" />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/instagram.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-2">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 2 -->
+        <div id="modal-2" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Santoso Wibowo</h3>
+            <p class="modal-text">
+              Halo! Aku Santoso, seorang UI/UX Designer...
+            </p>
+            <button class="cta-button close-modal">Close</button>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="bg-white p-6 rounded-lg shadow-md" x-data="{ open: false }">
-          <div class="flex flex-col items-center">
+        <!-- Member 3 -->
+        <article class="member-card">
+          <div class="member-profile">
             <img
-              alt="Portrait of Irene Caselli"
-              class="rounded-full mb-4"
-              height="100"
               src="image/profilrajuu.png"
-              width="100"
+              alt="Afif Ezzra"
+              class="member-photo"
             />
-            <h2 class="text-xl font-bold text-gray-800 mb-2">Afif Ezzra</h2>
-            <h3 class="text-md font-semibold text-gray-600 mb-4">
-              Front-End Developer
-            </h3>
-            <p class="text-gray-700 mb-4 text-center">
-              Tugas aku ngubah desain jadi kode yang bisa dipakai. Pokoknya,
-              biar website-nya smooth, responsif, dan enak dilihat!
+            <h3 class="member-name">Afif Ezzra</h3>
+            <p class="member-role">Front-End Developer</p>
+            <p class="member-bio">
+              Tugas aku ngubah desain jadi kode yang bisa dipakai...
             </p>
-            <div class="flex space-x-4 mt-4">
-              <a href="#" target="_blank"
-                ><img
-                  src="image/github-color-svgrepo-com.svg"
-                  alt="GitHub"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/whatsapp-symbol-logo-svgrepo-com.svg"
-                  alt="WhatsApp"
-                  class="w-6 h-6"
-              /></a>
-              <a href="#" target="_blank"
-                ><img
-                  src="image/instagram-2016-logo-svgrepo-com.svg"
-                  alt="Instagram"
-                  class="w-6 h-6"
-              /></a>
-            </div>
-            <button
-              class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-              @click="open = true"
-            >
-              My Role
-            </button>
           </div>
-          <div
-            x-cloak
-            x-show="open"
-            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-            @click.away="setTimeout(() => open = false, 80000)"
-          >
-            <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">Afif Ezzra</h2>
-              <p class="text-gray-700">
-                Aku bertanggung jawab atas pengembangan front-end, memastikan
-                semua desain UI bisa diimplementasikan dengan baik dalam kode.
-              </p>
-              <button
-                class="mt-4 bg-red-500 text-white px-4 py-2 rounded"
-                @click="open = false"
-              >
-                Close
-              </button>
-            </div>
+          <div class="member-social">
+            <a href="#" class="social-link">
+              <img src="image/github.svg" alt="GitHub" class="social-icon" />
+            </a>
+            <a href="#" class="social-link">
+              <img src="image/email.svg" alt="Email" class="social-icon" />
+            </a>
+            <a href="#" class="social-link">
+              <img
+                src="image/instagram.svg"
+                alt="Instagram"
+                class="social-icon"
+              />
+            </a>
+          </div>
+          <button class="cta-button open-modal" data-modal="modal-3">
+            My Role
+          </button>
+        </article>
+
+        <!-- Modal 3 -->
+        <div id="modal-3" class="member-modal">
+          <div class="modal-content">
+            <h3 class="modal-title">Afif Ezzra</h3>
+            <p class="modal-text">
+              Halo! Aku Afif, seorang Front-End Developer...
+            </p>
+            <button class="cta-button close-modal">Close</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- comentar -->
-    <section>
-      <div class="overflow-hidden p-8">
-        <div class="flex space-x-4 scroll-wrapper">
-          <div class="scroll-container">
-            <!-- Duplikasi Card untuk efek infinite scrolling -->
-            <div class="flex space-x-4">
-              <!-- Card 1 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Jan 27, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  How to Wait for <br />
-                  ling-count() and <br />
-                  ling-index() Functions
-                </h2>
-                <p class="text-orange-500 mt-2">FUNCTIONS</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/LnQLi_ucvwzhhguSPvodd8FJQUNujgsUtgQzRJexSFs.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Juan Diego Rodriguez</p>
-                </div>
-              </div>
 
-              <!-- Card 2 -->
+    <section
+      id="comentar"
+      class="bg-black-200 flex justify-center items-center min-h-screen"
+    >
+      <div class="layar-dalam">
+        <h3>Testimoni</h3>
+        <p class="ringkasan">
+          Teman-teman saya mengungkapkan bahwa Jogja adalah surga petualangan
+          yang memadukan romansa dan aksi, mulai dari gemerlap malam Malioboro
+          hingga adrenalin mendebarkan di pantai Timang, serta kehangatan budaya
+          yang mendalam, sungguh.
+        </p>
+      </div>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md"
+            data-aos="fade-down-left"
+          >
+            <div class="flex items-center mb-4">
               <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
+                class="bg-gray-400 text-white rounded-full h-10 w-10 flex items-center justify-center"
               >
-                <p class="text-sm text-gray-400">Article on Jan 23, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  Some Things You <br />
-                  Not Know About <br />
-                  Counter Styles
-                </h2>
-                <p class="text-orange-500 mt-2">LISTS</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/vVtgTgEAadSe9OWtFWydqOPfpm33WDcvwsvLvBu8ovs.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Geoff Graham</p>
-                </div>
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (1).jpeg"
+                  width="40"
+                />
               </div>
-
-              <!-- Card 3 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Jan 10, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  The Importance of <br />
-                  Investing in Soft Skills in <br />
-                  the Age of AI
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/fhrulamdzi_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@fhrulamdzi_</a
+                  >
                 </h2>
-                <p class="text-orange-500 mt-2">ARTIFICIAL INTELLIGENCE JOBS</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/d3HkrOCGTa9HCbt1FXq9OC8GuPw1xPzKqTo0tt14jZI.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Andy Bell</p>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Jan 26, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  The Little Triangle <br />
-                  Tooltip
-                </h2>
-                <p class="text-orange-500 mt-2">TOOLTIP</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/LnQLi_ucvwzhhguSPvodd8FJQUNujgsUtgQzRJexSFs.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Juan Diego Rodriguez</p>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Jan 15, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  Web-Slinger: <br />
-                  the Swiper-V
-                </h2>
-                <p class="text-orange-500 mt-2">SCROLL DRIVEN ANIMATION</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/na89n9l0AgfbOgiDHGtMUlwZz1EwElIYEgQhEfYCMss.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Lee Meyer</p>
-                </div>
-              </div>
-
-              <!-- Card 6 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Feb 1, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  Mastering CSS <br />
-                  Grid Layout
-                </h2>
-                <p class="text-orange-500 mt-2">CSS GRID</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/abc123.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Sarah Parker</p>
-                </div>
-              </div>
-
-              <!-- Card 7 -->
-              <div
-                id="card-comentar" class="bg-gray-800 p-4 rounded-lg w-64 flex-shrink-0 card transition-transform duration-300"
-              >
-                <p class="text-sm text-gray-400">Article on Feb 5, 2025</p>
-                <h2 class="text-xl font-bold mt-2">
-                  Understanding <br />
-                  Tailwind CSS <br />
-                  Utility Classes
-                </h2>
-                <p class="text-orange-500 mt-2">TAILWIND CSS</p>
-                <div class="flex items-center mt-4">
-                  <img
-                    class="w-8 h-8 rounded-full"
-                    src="https://storage.googleapis.com/a1aa/image/xyz789.jpg"
-                    alt="Profile"
-                  />
-                  <p class="ml-2">Michael Johnson</p>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
                 </div>
               </div>
             </div>
-            <!-- Duplikasi Card agar looping sempurna -->
-            <div class="flex space-x-4">
-              <!-- Semua card diulang di sini -->
+            <p class="text-gray-700 mb-4 hover:text-white-500">
+              "Jogja itu rindu yang tak pernah habis. Setiap sudutnya menyimpan
+              cerita, setiap langkahnya membawa kenangan. Senja di Parangtritis,
+              malam di Malioboro, kopi hangat di sudut angkringan semuanya
+              terasa lebih indah jika bersamamu. Jogja bukan sekadar kota, tapi
+              tempat di mana hati selalu ingin pulang.❤️✨"
+            </p>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            data-aos="fade-down"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="bg-gray-400 text-white rounded-full h-10 w-10 flex items-center justify-center"
+              >
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (2).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/willy.alwf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @willy.alwf</a
+                  >
+                </h2>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
+                </div>
+              </div>
             </div>
+            <p class="text-gray-700 mb-4 hover:text-white-500">
+              "Jogja itu seperti adegan film penuh aksi dan asmara. Di tengah
+              riuhnya Malioboro, cinta berlari mengejar impian, menyatu dengan
+              detak kota yang energik. Di Parangtritis, deburan ombak jadi saksi
+              adrenalin dan romantisme yang mendebarkan. Setiap sudutnya
+              mengisahkan petualangan, di mana hati beraksi dan rindu selalu
+              menantang waktu."
+            </p>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            data-aos="fade-down-right"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="bg-gray-400 text-white rounded-full h-10 w-10 flex items-center justify-center"
+              >
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (3).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/apipp.alkm/"
+                    target="_blank"
+                  >
+                    @apipp.alkm
+                  </a>
+                </h2>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4 hover:text-white-500">
+              Bagi yang mau meningkatkan skill IT, disini tempat yang cocok
+              banget ( biaya murah, fasilitas luar biasa bersih, dingin banget
+              dan wangi), pengajar nya juga berpengalaman da...
+            </p>
+          </div>
+          <!-- Testimonial 4 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            data-aos="fade-up-left"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="bg-gray-400 text-white rounded-full h-10 w-10 flex items-center justify-center"
+              >
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen repunk.png"
+                  width="40"
+                />
+              </div>
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/rpndarrf/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @rpndarrf</a
+                  >
+                </h2>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4 hover:text-white-500">
+              Coding Studio cocok untuk semua level, baik pemula maupun mereka
+              yang ingin mengembangkan keterampilan mereka. Materi yang
+              disajikan dirancang untuk memberikan...
+            </p>
+          </div>
+          <!-- Testimonial 5 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            data-aos="fade-up"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="bg-gray-400 text-white rounded-full h-10 w-10 flex items-center justify-center"
+              >
+                <img
+                  alt="Logo of Inspira Production"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen (5).jpeg"
+                  width="40"
+                />
+              </div>
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/eghznn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@eghznn</a
+                  >
+                </h2>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4 hover:text-white-500">
+              Salah satu solusi untuk meningkatkan karir. Sertifikasi yang
+              disediakan berkelas, orangnya ramah, semoga segera buka cabang di
+              daerah lain ya.
+            </p>
+          </div>
+          <!-- Testimonial 6 -->
+          <div
+            class="testimonial-card bg-white p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+            data-aos="fade-up-right"
+          >
+            <div class="flex items-center mb-4">
+              <div
+                class="bg-yellow-500 text-white rounded-full h-10 w-10 flex items-center justify-center"
+              >
+                <img
+                  alt="Photo of Jundi VG"
+                  class="rounded-full"
+                  height="40"
+                  src="image/komen 6.png"
+                  width="40"
+                />
+              </div>
+              <div class="ml-4">
+                <h2 class="text-black text-lg font-semibold">
+                  <a
+                    href="https://www.instagram.com/waliuddin_irfan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @waliuddin_irfan</a
+                  >
+                </h2>
+                <div class="flex items-center">
+                  <div class="flex items-center text-yellow-500">
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                    <i class="fas fa-star"> </i>
+                  </div>
+                  <i class="fas fa-check-circle text-blue-500 ml-2"> </i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-4">
+              "Jogja tuh selalu punya cara buat bikin kangen. Jalan-jalan di
+              Malioboro malam hari, dengerin musisi jalanan, sambil nyeruput
+              wedang ronde vibesnya bikin nyaman. Sunrise di Punthuk Setumbu,
+              sunset di Parangtritis, semuanya magis. Makan gudeg pagi-pagi,
+              terus santai di Kopi Klotok, rasanya pengen balik lagi!😍🔥"
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- untuk script wisata -->
+
+    <!-- footer -->
+
+    <section id="footer" class="footer">
+      <h6>© 2025 Sembada Dev. All Rights Reserved.</h6>
+    </section>
+
+    <!-- scriipt for our team -->
+    <script>
+      document.querySelectorAll(".open-modal").forEach((button) => {
+        button.addEventListener("click", function () {
+          const modalId = this.getAttribute("data-modal");
+          document.getElementById(modalId).style.display = "flex";
+        });
+      });
+
+      document.querySelectorAll(".close-modal").forEach((button) => {
+        button.addEventListener("click", function () {
+          this.closest(".member-modal").style.display = "none";
+        });
+      });
+
+      window.addEventListener("click", function (e) {
+        document.querySelectorAll(".member-modal").forEach((modal) => {
+          if (e.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      });
+    </script>
+
+    <!-- nav -->
+    <!-- <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar-scroll");
+        } else {
+          navbar.classList.remove("navbar-scroll");
+        }
+      });
+    </script> -->
+
+    <!-- navbarr -->
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled", "py-0");
+          navbar.classList.remove("bg-transparent");
+        } else {
+          navbar.classList.remove("scrolled", "py-0");
+          navbar.classList.add("bg-transparent");
+        }
+      });
+    </script>
+
+    <!-- wisata -->
     <script>
       // Ambil semua elemen kartu
       document.querySelectorAll(".card button").forEach((button) => {
@@ -809,7 +854,7 @@
         window.open(url, "batik.html");
       }
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
